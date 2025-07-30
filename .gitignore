@@ -5,14 +5,18 @@ EOS-greeter.conf
 fish/
 gedit/
 gtk-3.0/
+gtk-4.0/
 JetBrains/
 kitty/
+mimeapps.list
+nwg-look/
 pavucontrol.ini
 pulse/
 reflector-simple-free-params.txt
 sublime-text/
 Thunar/
 xfce4/
+xsettingsd/
 yay/
-mimeapps.list
+
 
