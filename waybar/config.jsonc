@@ -67,7 +67,7 @@
   "clock": {
     "interval": 1,
     "timezone": "Europe/Paris",
-    "format": "<span color='#BF00FF'>  </span> {:%H:%M} ",
+    "format": "<span color='#BF00FF'>  </span>  {:%H:%M} ",
     "tooltip": true,
     "tooltip-format": "{:L%A, %d / %m / %Y}"
   },
