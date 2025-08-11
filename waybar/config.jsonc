@@ -14,6 +14,7 @@
   "modules-right": [
     "pulseaudio",
     "clock"
+    
   ],
   "hyprland/workspaces": {
     "disable-scroll": false,
@@ -64,6 +65,21 @@
     "tooltip": true,
     "tooltip-format": "VOLUME : {volume}%"
   },
+  "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}%  ",
+        "format-plugged": "{capacity}%  ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
   "clock": {
     "interval": 1,
     "timezone": "Europe/Paris",
@@ -71,6 +87,7 @@
     "tooltip": true,
     "tooltip-format": "{:L%A, %d / %m / %Y}"
   },
+  
   "tray": {
     "icon-size": 17,
     "spacing": 1
