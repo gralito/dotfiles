@@ -3,4 +3,5 @@
 # end
 
 
-# Alias
+# Message de Bienvenue
+set -g fish_greeting "Salut Julien"
