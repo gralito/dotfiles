@@ -1,0 +1,96 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 42,
+  "spacing": 0,
+  "modules-left": [
+    "hyprland/workspaces",
+    "tray"
+  ],
+  "modules-center": [
+    "custom/reboot",
+    "custom/power"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "battery",
+    "clock"
+  ],
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "on-click": "activate",
+    "persistent-workspaces": {
+    "*":[1,2,3,4,5]
+    },
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "󰈹",
+      "4": "",
+      "5": "󰣇",
+      "default": "󰣇"
+    }
+  },
+  "custom/reboot": {
+    "format": "<span color='#FFD700'>  </span>",
+    "on-click": "systemctl reboot",
+    "tooltip": false,
+    "tooltip-format": "Reboot"
+  },
+  "custom/power": {
+    "format": "<span color='#FF4040'>  </span>",
+    "on-click": "systemctl poweroff",
+    "tooltip": false,
+    "tooltip-format": "Power Off"
+  },
+  "pulseaudio": {
+    "format": "<span color='#00FF7F'>{icon}</span>  {volume}% ",
+    "format-muted": "<span color='#FF4040'> 󰖁 </span>",
+    "format-icons": {
+      "headphone": "<span color='#BF00FF'>  </span> ",
+      "hands-free": "<span color='#BF00FF'>  </span> ",
+      "headset": "<span color='#BF00FF'>  </span> ",
+      "phone": "<span color='#00FFFF'>  </span> ",
+      "portable": "<span color='#00FFFF'>  </span> ",
+      "car": "<span color='#FFA500'>  </span> ",
+      "default": [
+        "<span color='#808080'>  </span>",
+        "<span color='#FFFF66'>  </span>",
+        "<span color='#00FF7F'>  </span>"
+      ]},
+    "on-click-right": "pavucontrol -t 3",
+    "on-click": "pactl -- set-sink-mute 0 toggle",
+    "tooltip": true,
+    "tooltip-format": "VOLUME : {volume}%"
+  },
+  "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}%",
+        "format-full": "  {icon}  ",
+        //"format-charging": "{capacity}%  ",
+        //"format-plugged": "{capacity}%  ",
+        //"format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+  "clock": {
+    "interval": 1,
+    "timezone": "Europe/Paris",
+    "format": "<span color='#BF00FF'>  </span>  {:%H:%M} ",
+    "tooltip": true,
+    "tooltip-format": "{:L%A, %d / %m / %Y}"
+  },
+  
+  "tray": {
+    "icon-size": 17,
+    "spacing": 1
+  }
+}
+
