@@ -3,18 +3,18 @@
 ---------------------
 
 -- Variables
-local mainMod       = "SUPER" -- Sets "Windows" key as main modifier
-local terminal      = "kitty"
-local fileManager   = "thunar"
-local menu          = "rofi -show drun"
-local lock          = "hyprlock"
-local take_screen   = "grim -g ${slurp -d} | wl-copy"
-local colorpick     = "hyprpicker"
+local mainMod       	= "SUPER" -- Sets "Windows" key as main modifier
+local terminal      	= "kitty"
+local fileManager   	= "thunar"
+local menu          	= "rofi -show drun"
+local lock          	= "hyprlock"
+local take_screen   	= "grim -g ${slurp -d} | wl-copy"
+local colorpick     	= "hyprpicker"
 
 -- General binds 
 hl.bind("SUPER + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.kill())
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager, { float = true }))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
