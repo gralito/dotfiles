@@ -40,6 +40,7 @@ local menu        = "rofi -show drun"
 
 -- key binding file
 require("keybinding")
+require("windowrules")
 
 -------------------
 ---- AUTOSTART ----
