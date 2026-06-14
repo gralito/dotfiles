@@ -44,7 +44,7 @@ local menu        = "rofi -show drun"
 --
 hl.on("hyprland.start", function () 
 --   hl.exec_cmd(terminal)
---    hl.exec_cmd("nm-applet")
+    hl.exec_cmd("nm-applet")
     hl.exec_cmd("waybar")
 end)
 
@@ -88,7 +88,7 @@ hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.config({
     general = {
         gaps_in  = 5,
-        gaps_out = 20,
+        gaps_out = 5,
 
         border_size = 2,
 
@@ -98,7 +98,7 @@ hl.config({
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
-        resize_on_border = false,
+        resize_on_border = true,
 
         -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
         allow_tearing = false,
@@ -107,12 +107,12 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 10,
+        rounding       = 8,
         rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.0,
-        inactive_opacity = 1.0,
+        inactive_opacity = 0.6,
 
         shadow = {
             enabled      = true,
